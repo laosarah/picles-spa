@@ -8,6 +8,7 @@ import { ImageBase64 } from "../../components/common/imageBase64/ImageBase64";
 import { Skeleton } from "../../components/common/Skeleton";
 import { useShelter } from "../../hooks/useShelter";
 import { Button, ButtonVariant } from "../../components/common/Button";
+import whatsapp from "../../assets/whatsapp.svg";
 
 export function PetDetails() {
   const { id } = useParams();
@@ -57,7 +58,7 @@ export function PetDetails() {
                     >
                       <Button variant={ButtonVariant.Text}>
                         <span className={styles.buttonWhatsApp}>
-                          {/* {<img src={whatsapp}/>} */}
+                          {<img src={whatsapp} />}
                           Entre em contato com o abrigo.
                         </span>
                       </Button>

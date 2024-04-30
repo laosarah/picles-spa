@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, Ref, forwardRef } from "react";
-import styles from "./Input.module.css";
+import styless from "./Input.module.css";
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -7,7 +7,7 @@ interface IInput extends InputHTMLAttributes<HTMLInputElement> {
 
 function ForwardInput({ label, ...rest }: IInput, ref: Ref<HTMLInputElement>) {
   return (
-    <div className={styles.inputGroup}>
+    <div className={styless.inputGroup}>
       <label>{label}</label>
       <input ref={ref} {...rest} />
     </div>

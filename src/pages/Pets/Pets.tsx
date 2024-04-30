@@ -1,6 +1,6 @@
 import { Header } from "../../components/common/Header";
 import { Grid } from "../../components/layout/Grid";
-import styles from "./Pets.module.css";
+import styless from "./Pets.module.css";
 import { Card } from "../../components/common/Card";
 import { Skeleton } from "../../components/common/Skeleton";
 import { Pagination } from "../../components/common/Pagination";
@@ -77,16 +77,16 @@ export function Pets() {
 
   return (
     <Grid>
-      <div className={styles.container}>
+      <div className={styless.container}>
         <Header />
         <form
-          className={styles.filters}
+          className={styless.filters}
           onSubmit={applyFilters}
           onChange={checkButtonStatus}
         >
-          <div className={styles.columns}>
+          <div className={styless.columns}>
             {filterColumns.map((filter) => (
-              <div key={filter.name} className={styles.column}>
+              <div key={filter.name} className={styless.column}>
                 <Select
                   label={filter.title}
                   defaultValue={urlParams[filter.name]}
@@ -106,9 +106,9 @@ export function Pets() {
           </Button>
         </form>
         {isLoading && (
-          <Skeleton containerClassName={styles.skeleton} count={10} />
+          <Skeleton containerClassName={styless.skeleton} count={10} />
         )}
-        <main className={styles.list}>
+        <main className={styless.list}>
           {data?.items.map((pet) => (
             <Card
               key={pet.id}

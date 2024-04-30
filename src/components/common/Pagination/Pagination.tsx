@@ -1,4 +1,4 @@
-import styles from "./Pagination.module.css";
+import styless from "./Pagination.module.css";
 
 interface IPagination {
   currentPage: number;
@@ -15,11 +15,11 @@ export function Pagination({
 
   return (
     <nav>
-      <ul className={styles.pagination}>
+      <ul className={styless.pagination}>
         {pageNumber.map((number) => (
           <li
             key={number}
-            className={`${currentPage === number ? styles.active : null}`}
+            className={`${currentPage === number ? styless.active : null}`}
           >
             <button onClick={() => onPageChange(number)}>{number}</button>
           </li>

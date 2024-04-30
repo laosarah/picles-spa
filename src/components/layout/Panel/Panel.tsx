@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./Panel.module.css";
+import styless from "./Panel.module.css";
 import { Sidebar } from "../../common/Sidebar";
 
 interface IPanel {
@@ -8,9 +8,9 @@ interface IPanel {
 
 export function Panel({ children }: IPanel) {
   return (
-    <div className={styles.panel}>
+    <div className={styless.panel}>
       <Sidebar />
-      <main className={styles.content}>{children}</main>
+      <main className={styless.content}>{children}</main>
     </div>
   );
 }

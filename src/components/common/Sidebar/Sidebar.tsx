@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styles from "./Sidebar.module.css";
+import styless from "./Sidebar.module.css";
 import { Toaster, toast } from "sonner";
 import { useShelter } from "../../../hooks/useShelter";
 
@@ -17,9 +17,9 @@ export function Sidebar() {
 
   return (
     <>
-      <nav className={styles.sidebar}>
+      <nav className={styless.sidebar}>
         <NavLink
-          className={({ isActive }) => (isActive ? styles.active : "")}
+          className={({ isActive }) => (isActive ? styless.active : "")}
           to="/admin"
           end
         >
@@ -27,7 +27,7 @@ export function Sidebar() {
         </NavLink>
         <NavLink
           onClick={validate}
-          className={({ isActive }) => (isActive ? styles.active : "")}
+          className={({ isActive }) => (isActive ? styless.active : "")}
           to="/admin/pets"
         >
           Pets
